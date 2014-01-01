@@ -14,3 +14,9 @@ testdata:
   last_name: "Rails"
   profile_name: "rubyrails"
   email: "rubyrails@gmail.com"
+
+testdata2:
+  first_name: "Ruby2"
+  last_name: "Rails2"
+  profile_name: "rubyrails2"
+  email: "rubyrails2@gmail.com"
