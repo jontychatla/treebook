@@ -4,4 +4,25 @@ class StatusTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+  test "that a status requires content" do
+  	status = Status.new
+  	assert !status.save
+  	assert !status.errors[:content].empty?
+  end	
+
+  test "that the content should be of minimum 2 length" do
+  	status = Status.new
+  	status.content = "M"
+  	assert !status.save
+  	assert !status.errors[:content].empty?
+  end
+
+  test "that a status has a user id" do
+  	status = Status.new	
+  	status.content = "hello"
+  	assert !status.save
+  	#puts status.errors.inspect
+  	assert !status.errors[:user_id].empty?
+  end	
+
 end
